@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from public_service import views
+from public_service.views import *
 
 from rest_framework import routers
 
@@ -25,4 +26,8 @@ router.register('pessoas', views.PessoaViewset, basename='Pessoas')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('pessoas/schooling', schooling),
+    path('pessoas/states_of_life', states_of_life), 
+    path('pessoas/status', status), 
+    path('pessoas/states', states),  
 ]
