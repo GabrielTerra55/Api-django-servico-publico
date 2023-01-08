@@ -4,14 +4,14 @@ from public_service.model.schooling import dict_schooling
 from public_service.model.states_of_life import dict_states_of_life
 from public_service.model.status import dict_status
 from public_service.model.states import dict_states
-from public_service import models
+from public_service.models import Pessoa
 from public_service import serializer
 
 
 class PessoaViewset(viewsets.ModelViewSet):
     "exibindo todas as pessoas"
 
-    queryset = models.Pessoa.objects.all()
+    queryset = Pessoa.objects.all()
     serializer_class = serializer.PessoaSerializer
 
 def schooling(request):

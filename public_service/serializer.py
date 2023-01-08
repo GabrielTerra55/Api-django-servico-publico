@@ -16,4 +16,5 @@ class PessoaSerializer(serializers.ModelSerializer):
         if not name_valid(data['name']):
             raise serializers.ValidationError({'name': 'insira somente letras'})
 
+
         return data

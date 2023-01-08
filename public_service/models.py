@@ -9,7 +9,7 @@ class Pessoa(models.Model):
     name = models.CharField(max_length=30, blank=False, null=False,)
     birth = models.DateField(null=False)
     cpf = models.CharField(max_length=11, blank=False, unique=True)
-    e_mail = models.EmailField(max_length=250)
+    e_mail = models.EmailField(max_length=250, unique=True)
     states = models.CharField(max_length=100, choices=states, blank=False, null=False,)
     marital_status = models.CharField(max_length=100, choices=status, blank=False, null=False,)
     average_wage = models.PositiveIntegerField()
