@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from public_service import models
+from public_service import models 
 from public_service.validators import *
 
 class PessoaSerializer(serializers.ModelSerializer):
