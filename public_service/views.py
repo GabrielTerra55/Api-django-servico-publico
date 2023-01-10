@@ -1,4 +1,4 @@
-from rest_framework import viewsets, request, filters
+from rest_framework import viewsets, filters
 from django.http import JsonResponse
 from public_service.model.schooling import dict_schooling
 from public_service.model.states_of_life import dict_states_of_life
